@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { View, Text, Switch, Button, TextInput, StyleSheet } from 'react-native';
+import { View, Text, Switch, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 
 
 const CadastroP3 = ({ navigation }) => {
@@ -14,8 +14,7 @@ const CadastroP3 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.form}>
-        <Text style={styles.h1}>Crie a sua Senha</Text>
-        <Text style={styles.label}>Coloque sua própria senha</Text>
+        <Text style={styles.tituloPrincipal}>Create a Password</Text>
         <TextInput
           style={styles.input}
           value={text}
@@ -25,11 +24,10 @@ const CadastroP3 = ({ navigation }) => {
         <View >
           <Text style={styles.label} value={isPasswordVisible} onPress={togglePasswordVisibility}>{isPasswordVisible ? 'Esconder Senha' : 'Mostrar Senha'}</Text>
         </View>
-        <Button
-          style={styles.button}
-          title="Próximo"
-          onPress={() => navigation.navigate('Verificacao')}
-        />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}
+            onPress={() => navigation.navigate('Verificacao')}>Sign up</Text>
+        </TouchableOpacity>
       </View>
 
     </View>
@@ -48,28 +46,36 @@ const styles = StyleSheet.create({
   scwitchContainer: {
     flexDirection: 'row'
   },
-  h1: {
+  tituloPrincipal: {
     fontSize: 28,
     fontWeight: 600,
-    textAlign: 'center',
-  },
-  text: {
-    fontSize: 12,
-    fontWeight: 500,
+    marginBottom: 20,
     textAlign: 'center',
   },
   label: {
-    marginTop: 20
+    fontSize: 13,
+    fontWeight: 700,
+    marginBottom: 8
   },
   input: {
-    width: 400,
+    width: 300,
     borderBottomWidth: 1,
-    borderColor: 'black',
-    marginBottom: 20,
-    paddingTop: 19,
-    paddingBottom: 19,
-    paddingLeft: 32,
-    paddingRight: 32,
+    borderColor: '#CFCFCF',
+    padding: 10,
+    borderRadius: 50,
+    marginBottom: 25,
+  },
+  button: {
+    backgroundColor: '#41c485',
+    borderRadius: 50,
+    padding: 13,
+    marginTop: 20,
+    marginBottom: 40
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontWeight: 500,
   },
   viewSocialMedia: {
     flexDirection: 'row'

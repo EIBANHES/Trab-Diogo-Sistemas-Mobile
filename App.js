@@ -22,8 +22,8 @@ export default function App() {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="CadastroP1" component={CadastroP1} />
-      <Stack.Screen name="CadastroP2" component={CadastroP2} />
-      <Stack.Screen name="CadastroP3" component={CadastroP3} />
+      <Stack.Screen name="Sign up" component={CadastroP2} />
+      <Stack.Screen name="Create Password" component={CadastroP3} />
       <Stack.Screen name="Verificacao" component={Verificacao} />
       <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>

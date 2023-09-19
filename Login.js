@@ -33,8 +33,10 @@ const Login = ({ navigation }) => {
 
             <View>
                 <Text
-                    style={styles.createAccount}>
-                    Don't have an account ?
+                    style={styles.createAccount}
+                    onPress={() => navigation.navigate('CadastroP1')}>
+                   Create account?
+                    
                 </Text>
                 <Text
                     style={styles.createAccount}>
@@ -89,9 +91,9 @@ const styles = StyleSheet.create({
     },
     input: {
         width: 300,
-        borderWidth: 0,
-        padding: 10,
+        borderWidth: 1,
         borderColor: '#CFCFCF',
+        padding: 10,
         borderRadius: 50,
         marginBottom: 25,
     },
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
     image: {
         width: 50,
         height: 50,
-        borderRadius: 50, // Define as bordas arredondadas para criar um círculo
+        borderRadius: 50,
         margin: 10,
     }
 });

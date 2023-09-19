@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, Text, Image, Button, TextInput, StyleSheet } from 'react-native';
+import { View, Text, Image, Button, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 
 const CadastroP2 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.form}>
-        <Text style={styles.h1}>Qual o seu email?</Text>
+        <Text style={styles.tituloPrincipal}>What’s your email?</Text>
         <Text style={styles.label}>Endereço Email</Text>
         <TextInput
+          placeholder='Email Address'
+          keyboardType=''
           style={styles.input}
         />
-        <Button
-          style={styles.button}
-          title="Próximo"
-          onPress={() => navigation.navigate('CadastroP3')}
-        />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}
+            onPress={() => navigation.navigate('Create Password')}>Next</Text>
+        </TouchableOpacity>
       </View>
 
     </View>
@@ -27,10 +28,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  h1: {
-    fontSize: 28,
-    fontWeight: 600,
+  tituloPrincipal: {
+    color: 'black',
     textAlign: 'center',
+    fontSize: 25,
+    marginBottom: 40,
   },
   text: {
     fontSize: 12,
@@ -38,17 +40,28 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   label: {
-    marginTop:20
+    fontSize: 13,
+    fontWeight: 700,
+    marginBottom: 8
   },
   input: {
-    width: 400,
+    width: 300,
     borderBottomWidth: 1,
-    borderColor: 'black',
-    marginBottom: 20,
-    paddingTop: 19,
-    paddingBottom: 19,
-    paddingLeft: 32,
-    paddingRight: 32,
+    borderColor: '#CFCFCF',
+    padding: 10,
+    borderRadius: 50,
+    marginBottom: 25,
+  },
+  button: {
+    backgroundColor: '#41c485',
+    borderRadius: 50,
+    padding: 13,
+    marginBottom: 40
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontWeight: 500,
   },
   viewSocialMedia: {
     flexDirection: 'row'
