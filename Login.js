@@ -22,7 +22,7 @@ const Login = ({ navigation }) => {
                 />
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}
-                        onPress={() => navigation.navigate('CadastroP1')}>Login</Text>
+                        onPress={() => navigation.navigate('Create Account')}>Login</Text>
                 </TouchableOpacity>
                 <Text
                     style={styles.forgotPassword}
@@ -34,7 +34,7 @@ const Login = ({ navigation }) => {
             <View>
                 <Text
                     style={styles.createAccount}
-                    onPress={() => navigation.navigate('CadastroP1')}>
+                    onPress={() => navigation.navigate('Create Account')}>
                    Create account?
                     
                 </Text>
